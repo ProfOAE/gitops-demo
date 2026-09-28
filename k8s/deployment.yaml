@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hello-app
-      image: nginx:1.25
-      ports:
-      - containerPort: 80
+        image: nginx:1.25
+        ports:
+        - containerPort: 80
