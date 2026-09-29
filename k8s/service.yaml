@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-app
+  name: service-learning-gitops
 spec:
   selector:
-    app: hello-app
+    app: learning-gitops
   ports:
   - port: 80
   type: ClusterIP

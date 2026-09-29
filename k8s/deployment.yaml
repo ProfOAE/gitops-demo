@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-app
+  name: learning-gitops
   labels:
-    app: hello-app
+    app: learning-gitops
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
-      app: hello-app
+      app: learning-gitops
   template:
     metadata:
       labels:
-        app: hello-app
+        app: learning-gitops
     spec:
       containers:
-      - name: hello-app
+      - name: learning-gitops
         image: nginx:1.25
         ports:
         - containerPort: 80
