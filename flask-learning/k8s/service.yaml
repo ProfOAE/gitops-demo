@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-flask-learning
+spec:
+  selector:
+    app: flask-learning  # must match label above
+  ports:
+    - port: 80          # receptionist desk
+      targetPort: 5000  # pod door - SAME as containerPort
+  type: ClusterIP

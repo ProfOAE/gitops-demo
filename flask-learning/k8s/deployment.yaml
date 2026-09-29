@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-learning
+  labels:
+    app: flask-learning
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-learning
+  template:
+    metadata:
+      labels:
+        app: flask-learning
+    spec:
+      containers:
+      - name: flask-learning
+      image: python:3.9-slim
+      command: ["python", "-m", "http.server", "5000"]
+      ports:
+      - containerPort: 5000
